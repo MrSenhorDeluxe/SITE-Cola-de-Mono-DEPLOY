@@ -1,0 +1,108 @@
+/* ==========================================================
+   PRODUTOS + COMPRA — página de vendas
+   ========================================================== */
+.banner {
+  position: relative; display: grid; place-items: center;
+  min-height: 240px; text-align: center; color: var(--creme);
+  background: var(--site-noite) url("../assets/img/fotos/banner-especiarias.webp") center / cover;
+  isolation: isolate;
+}
+.banner::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(32,21,12,.85), rgba(74,36,19,.55));
+}
+.banner__titulo {
+  font-size: var(--fs-2xl); letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--creme); margin: 0;
+}
+
+/* Lista de produtos — em ordem de claro para escuro */
+.catalogo { max-width: 960px; margin-inline: auto; }
+
+.produto {
+  display: grid; grid-template-columns: minmax(180px, 280px) 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem); align-items: center;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+}
+.produto--tradicional { background: linear-gradient(180deg, var(--creme-claro), var(--prod-1)); color: var(--site-noite); }
+.produto--sem-alcool  { background: linear-gradient(180deg, #9b5836, var(--prod-3)); color: var(--creme); }
+.produto--chocolate   { background: linear-gradient(180deg, var(--prod-3), var(--prod-4)); color: var(--creme); }
+.produto h2 { color: inherit; font-size: var(--fs-lg); margin-bottom: 0.4rem; }
+
+.produto__foto {
+  border: 2px solid rgba(143,60,39,.9); border-radius: 16px;
+  background: rgba(255,246,232,.55); padding: 0.75rem;
+}
+.produto--sem-alcool .produto__foto,
+.produto--chocolate .produto__foto { border-color: var(--prod-1); }
+.produto__foto img { margin-inline: auto; max-height: 420px; width: auto; object-fit: contain; }
+
+.produto__preco { font-weight: 600; font-size: var(--fs-sm); margin-bottom: 0.4rem; }
+.produto .slogan { color: inherit; font-size: var(--fs-md); margin-bottom: 1rem; }
+.produto__texto { font-size: var(--fs-sm); max-width: 60ch; margin-top: 1.25rem; }
+.produto .btn { background: var(--site-noite); color: var(--creme); border-color: var(--site-noite); }
+.produto--sem-alcool .btn, .produto--chocolate .btn { background: var(--creme); color: var(--site-noite); border-color: var(--creme); }
+
+@media (max-width: 640px) {
+  .produto { grid-template-columns: 1fr; }
+  .produto__foto img { max-height: 320px; }
+}
+
+/* Etapa de compra */
+.compra { padding-block: 3rem 1rem; }
+.compra__voltar {
+  background: none; border: 0; padding: 0; margin-bottom: 1.5rem; cursor: pointer;
+  font: 600 var(--fs-sm)/1 var(--fonte-texto); color: var(--site-cacau); text-decoration: underline;
+}
+.compra__grade { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.compra__titulo { font-size: var(--fs-xl); }
+
+.resumo {
+  margin-top: 1.5rem; padding: 1.25rem; border-radius: 12px;
+  background: var(--site-cacau); color: var(--creme);
+  display: grid; grid-template-columns: 84px 1fr; gap: 1rem; align-items: center;
+}
+.resumo img { height: 120px; width: auto; margin-inline: auto; object-fit: contain; }
+.resumo h3 { color: var(--creme); font-size: var(--fs-md); margin-bottom: 0.25rem; }
+.resumo p { margin: 0; font-size: var(--fs-sm); }
+.resumo__total { grid-column: 1 / -1; border-top: 1px solid rgba(255,246,232,.3); padding-top: 0.9rem; }
+.resumo__total strong { font-size: var(--fs-md); }
+
+.quantidade { display: inline-flex; align-items: center; margin-top: 0.5rem; border: 1px solid var(--creme); border-radius: var(--raio-sm); }
+.quantidade button {
+  width: 34px; height: 34px; background: none; border: 0; color: var(--creme);
+  font-size: 1.1rem; cursor: pointer;
+}
+.quantidade output { min-width: 2ch; text-align: center; font-weight: 600; }
+.quantidade button:focus-visible { outline-color: var(--creme); }
+
+/* Formulário */
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; }
+.form__campo { display: flex; flex-direction: column; gap: 0.3rem; }
+.form__campo--cheio { grid-column: 1 / -1; }
+.form label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.04em; }
+.form input, .form textarea {
+  font: inherit; font-size: var(--fs-sm); color: var(--site-noite);
+  background: var(--creme); border: 1px solid transparent; border-radius: var(--raio-sm);
+  padding: 0.7rem 0.8rem; width: 100%;
+}
+.form textarea { min-height: 130px; resize: vertical; }
+.form input[aria-invalid="true"] { border-color: var(--site-ferrugem); box-shadow: 0 0 0 2px var(--site-ferrugem); }
+.form__erro { font-size: var(--fs-xs); color: var(--site-ferrugem); font-weight: 600; margin: 0; min-height: 1.1em; }
+.form__acoes { grid-column: 1 / -1; display: flex; justify-content: flex-end; }
+
+@media (max-width: 760px) {
+  .compra__grade { grid-template-columns: 1fr; }
+  .form { grid-template-columns: 1fr; }
+}
+
+/* Confirmação (simulada) */
+.dialogo {
+  border: 0; border-radius: 16px; padding: 2rem; max-width: 440px; width: calc(100% - 2rem);
+  background: var(--creme); color: var(--site-noite); text-align: center;
+}
+.dialogo::backdrop { background: rgba(32,21,12,.65); }
+.dialogo h2 { font-size: var(--fs-lg); }
+.dialogo .btn { margin-top: 0.75rem; }
+
+[hidden] { display: none !important; }

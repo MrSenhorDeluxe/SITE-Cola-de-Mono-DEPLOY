@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos — VETA Cola de Mono</title>
+  <meta name="description" content="VETA Cola de Mono — a essência do Chile à mesa. Site demonstrativo (simulação de vendas).">
+  <link rel="icon" href="assets/img/logos/logo-ferrugem.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/idade.css">
+  <link rel="stylesheet" href="css/produtos.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" aria-label="CH Exports — página inicial">
+        <img src="assets/img/logos/logo-areia.png" alt="CH Exports — Productos chilenos para Brasil" width="60" height="52">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">
+        <span></span><span class="sr-only" data-i18n="menu">Menu</span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a class="nav__link" href="index.html" aria-current="page" data-i18n="nav.inicio">Início</a></li>
+          <li><a class="nav__link" href="index.html#sobre" data-i18n="nav.sobre">Sobre nós</a></li>
+          <li><a class="nav__link" href="produtos.html" data-i18n="nav.produtos">Produtos</a></li>
+        </ul>
+        <div class="idiomas" role="group" aria-label="Idioma">
+          <button class="idiomas__btn" type="button" data-lang="es" aria-pressed="false">ESP</button>
+          <button class="idiomas__btn" type="button" data-lang="pt" aria-pressed="true">PT-BR</button>
+          <button class="idiomas__btn" type="button" data-lang="en" aria-pressed="false">ENG</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="banner">
+      <h1 class="banner__titulo" data-i18n="produtos.titulo">Nossos produtos</h1>
+    </div>
+
+    <!-- Etapa 1: escolha do produto -->
+    <section class="container secao" id="etapa-produtos" aria-label="Catálogo">
+      <div class="catalogo">
+        <article class="produto produto--tradicional" data-produto="tradicional" data-brl="79.90" data-clp="5990" data-img="assets/img/produtos/garrafa-tradicional.webp">
+          <div class="produto__foto">
+            <img src="assets/img/produtos/garrafa-tradicional.webp" alt="Garrafa VETA Cola de Mono Tradicional" width="360" height="540" loading="lazy">
+          </div>
+          <div>
+            <h2 data-i18n="p.trad.nome">VETA Tradicional</h2>
+            <p class="produto__preco">R$79,90 / 750 ml &nbsp;|&nbsp; $5.990 CLP / 750 ml</p>
+            <p class="slogan" data-i18n="p.trad.tag">A origem da tradição.</p>
+            <button class="btn" type="button" data-selecionar data-i18n="btn.selecionar">Selecionar</button>
+            <div class="produto__texto">
+              <p data-i18n="p.trad.d1">Inspirada na tradicional bebida chilena Cola de Mono, a VETA Tradicional combina a cremosidade do leite com o aroma marcante do café, notas delicadas de canela, baunilha e especiarias, além do toque de pisco chileno. Uma combinação que valoriza os sabores da tradição e transforma cada gole em uma experiência acolhedora, autêntica e cheia de personalidade.</p>
+              <p data-i18n="p.trad.d2">Uma homenagem às origens chilenas, criada para acompanhar bons momentos e tornar cada encontro ainda mais especial.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="produto produto--sem-alcool" data-produto="sem-alcool" data-brl="79.90" data-clp="5990" data-img="assets/img/produtos/garrafa-sem-alcool.webp">
+          <div class="produto__foto">
+            <img src="assets/img/produtos/garrafa-sem-alcool.webp" alt="Garrafa VETA Cola de Mono Sem Álcool" width="360" height="540" loading="lazy">
+          </div>
+          <div>
+            <h2 data-i18n="p.sem.nome">VETA Sem Álcool</h2>
+            <p class="produto__preco">R$79,90 / 750 ml &nbsp;|&nbsp; $5.990 CLP / 750 ml</p>
+            <p class="slogan" data-i18n="p.sem.tag">A essência da tradição, sem álcool.</p>
+            <button class="btn" type="button" data-selecionar data-i18n="btn.selecionar">Selecionar</button>
+            <div class="produto__texto">
+              <p data-i18n="p.sem.d1">A VETA Sem Álcool preserva a essência da experiência VETA em uma versão sem adição de pisco ou de outros componentes alcoólicos. A cremosidade do leite, o aroma do café e as notas de canela, baunilha e especiarias se unem para oferecer uma experiência saborosa e acolhedora, inspirada na tradição chilena.</p>
+              <p data-i18n="p.sem.d2">Uma alternativa para quem deseja apreciar os sabores e a identidade da VETA em diferentes momentos, compartilhando a mesma essência de tradição, conexão e prazer à mesa.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="produto produto--chocolate" data-produto="chocolate" data-brl="79.90" data-clp="5990" data-img="assets/img/produtos/garrafa-chocolate.webp">
+          <div class="produto__foto">
+            <img src="assets/img/produtos/garrafa-chocolate.webp" alt="Garrafa VETA Cola de Mono Chocolate" width="360" height="540" loading="lazy">
+          </div>
+          <div>
+            <h2 data-i18n="p.choc.nome">VETA Chocolate</h2>
+            <p class="produto__preco">R$79,90 / 750 ml &nbsp;|&nbsp; $5.990 CLP / 750 ml</p>
+            <p class="slogan" data-i18n="p.choc.tag">Tradição com uma nova intensidade.</p>
+            <button class="btn" type="button" data-selecionar data-i18n="btn.selecionar">Selecionar</button>
+            <div class="produto__texto">
+              <p data-i18n="p.choc.d1">A VETA Chocolate reinventa a tradição ao unir a base cremosa e aromática da VETA Tradicional à intensidade envolvente do cacau. O café, as especiarias e o pisco chileno se encontram em uma combinação rica em sabor, com um toque achocolatado que torna a experiência ainda mais marcante.</p>
+              <p data-i18n="p.choc.d2">Ideal para quem aprecia sabores mais intensos e busca uma bebida especial para desfrutar após as refeições, especialmente ao lado de uma boa sobremesa.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Etapa 2: finalização da compra (simulada) -->
+    <section class="container compra" id="etapa-compra" aria-labelledby="compra-titulo" hidden>
+      <button class="compra__voltar" type="button" data-voltar data-i18n="compra.voltar">← Voltar aos produtos</button>
+
+      <div class="compra__grade">
+        <div>
+          <h2 class="compra__titulo" id="compra-titulo" data-i18n="compra.titulo">Confirmar compra:</h2>
+
+          <div class="resumo" aria-live="polite">
+            <img src="" alt="" id="resumo-img" width="84" height="120">
+            <div>
+              <h3 id="resumo-nome">—</h3>
+              <p id="resumo-preco">—</p>
+              <div class="quantidade" role="group" aria-label="Quantidade">
+                <button type="button" data-qtd="-1" aria-label="Diminuir quantidade">−</button>
+                <output id="resumo-qtd">1</output>
+                <button type="button" data-qtd="1" aria-label="Aumentar quantidade">+</button>
+              </div>
+            </div>
+            <p class="resumo__total"><span data-i18n="compra.total">Total</span>: <strong id="resumo-total">—</strong></p>
+          </div>
+        </div>
+
+        <form class="form" id="form-compra" novalidate>
+          <div class="form__campo">
+            <label for="nome" data-i18n="form.nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Nome Sobrenome">
+            <p class="form__erro" data-erro-de="nome"></p>
+          </div>
+          <div class="form__campo">
+            <label for="telefone" data-i18n="form.telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000">
+            <p class="form__erro" data-erro-de="telefone"></p>
+          </div>
+          <div class="form__campo form__campo--cheio">
+            <label for="email" data-i18n="form.email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="email@exemplo.com">
+            <p class="form__erro" data-erro-de="email"></p>
+          </div>
+          <div class="form__campo form__campo--cheio">
+            <label for="endereco" data-i18n="form.endereco">Endereço</label>
+            <input id="endereco" name="endereco" type="text" autocomplete="street-address" required placeholder="Rua, número, complemento">
+            <p class="form__erro" data-erro-de="endereco"></p>
+          </div>
+          <div class="form__campo form__campo--cheio">
+            <label for="cidade" data-i18n="form.cidade">Cidade</label>
+            <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required placeholder="Cidade / UF">
+            <p class="form__erro" data-erro-de="cidade"></p>
+          </div>
+          <div class="form__campo form__campo--cheio">
+            <label for="mensagem" data-i18n="form.mensagem">Sua mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Opcional"></textarea>
+          </div>
+          <div class="form__acoes">
+            <button class="btn" type="submit" data-i18n="form.enviar">Enviar pedido</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <dialog class="dialogo" id="dialogo-sucesso" aria-labelledby="dialogo-titulo">
+      <h2 id="dialogo-titulo" data-i18n="ok.titulo">Pedido recebido!</h2>
+      <p id="dialogo-texto" data-i18n="ok.texto">Esta é uma simulação: nenhum pagamento foi processado e nenhum dado foi enviado.</p>
+      <button class="btn" type="button" id="dialogo-fechar" data-i18n="ok.fechar">Voltar aos produtos</button>
+    </dialog>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <ul class="footer__social" aria-label="Redes sociais">
+        <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17.2 6a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM12 3c-2.4 0-2.7 0-3.7.1-1 0-1.600.2-2.200.4a4.400 4.400 0 0 0-1.600 1 4.400 4.400 0 0 0-1 1.600c-.2.600-.4 1.200-.4 2.200C3 9.300 3 9.600 3 12s0 2.700.1 3.700c0 1 .2 1.600.4 2.200.2.600.5 1.100 1 1.600s1 .8 1.600 1c.6.2 1.200.4 2.200.4 1 .1 1.300.1 3.700.1s2.700 0 3.700-.1c1 0 1.600-.2 2.200-.4a4.400 4.400 0 0 0 1.600-1 4.400 4.400 0 0 0 1-1.600c.2-.6.4-1.200.4-2.200.1-1 .1-1.300.1-3.700s0-2.700-.1-3.700c0-1-.2-1.600-.4-2.200a4.400 4.400 0 0 0-1-1.600 4.400 4.400 0 0 0-1.600-1c-.6-.2-1.200-.4-2.200-.4C14.700 3 14.400 3 12 3zm0 1.600c2.400 0 2.600 0 3.600.1.900 0 1.400.2 1.700.3.400.2.700.4 1 .7.300.3.500.6.700 1 .1.300.3.800.3 1.700.1 1 .1 1.200.1 3.600s0 2.600-.1 3.600c0 .9-.2 1.400-.3 1.700-.2.400-.4.700-.7 1-.3.300-.6.500-1 .7-.3.100-.8.300-1.700.3-1 .1-1.200.1-3.600.1s-2.600 0-3.600-.1c-.9 0-1.400-.2-1.700-.3-.4-.2-.7-.4-1-.7-.3-.3-.5-.6-.7-1-.1-.3-.3-.8-.3-1.700-.1-1-.1-1.200-.1-3.600s0-2.600.1-3.600c0-.9.2-1.400.3-1.700.2-.4.400-.7.700-1 .3-.3.600-.5 1-.7.3-.1.800-.3 1.700-.3 1-.1 1.200-.1 3.600-.1z"/></svg></a></li>
+        <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.500 21v-7.500h2.500l.4-3h-2.900V8.600c0-.9.300-1.500 1.500-1.500h1.500V4.400c-.3 0-1.200-.1-2.200-.1-2.200 0-3.700 1.300-3.700 3.800v2.400H8v3h2.600V21h2.900z"/></svg></a></li>
+        <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.600 7.200a2.500 2.500 0 0 0-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800zM10 15V9l5.200 3L10 15z"/></svg></a></li>
+        <li><a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.700 13.600L3 21l4.500-1.200A9 9 0 1 0 12 3zm0 1.700a7.300 7.300 0 1 1-3.800 13.500l-.3-.2-2.600.7.700-2.500-.2-.3A7.300 7.300 0 0 1 12 4.700zm-2.800 3.600c-.2 0-.4 0-.6.300-.2.300-.8.800-.8 1.900s.8 2.200.9 2.300c.1.200 1.600 2.500 3.900 3.400 1.900.8 2.300.6 2.700.6.400 0 1.300-.5 1.500-1.100.2-.5.2-1 .1-1.100l-.4-.2-1.400-.7c-.2-.1-.4-.1-.5.100l-.6.800c-.1.200-.3.200-.5.100-.2-.1-1-.4-1.800-1.100-.7-.6-1.200-1.400-1.300-1.600-.1-.2 0-.4.100-.5l.4-.4.200-.4v-.4l-.7-1.600c-.2-.4-.4-.4-.5-.4z"/></svg></a></li>
+      </ul>
+
+      <a class="footer__logo" href="index.html" aria-label="CH Exports — página inicial">
+        <img src="assets/img/logos/logo-areia.png" alt="CH Exports" width="74" height="64">
+      </a>
+
+      <div class="footer__copy">
+        <p><strong data-i18n="end.rot">Endereço comercial</strong><br><span data-i18n="end.texto">Matriz: Santiago, Região Metropolitana, Chile.</span></p>
+        <p>© 2026 CH Exports. <span data-i18n="demo">Site demonstrativo.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Aviso de maioridade (exibido na primeira visita) -->
+  <dialog class="idade" id="aviso-idade" aria-labelledby="idade-titulo" aria-describedby="idade-texto">
+    <div class="idade__idiomas idiomas" role="group" aria-label="Idioma">
+      <button class="idiomas__btn" type="button" data-lang="es" aria-pressed="false">ESP</button>
+      <button class="idiomas__btn" type="button" data-lang="pt" aria-pressed="true">PT-BR</button>
+      <button class="idiomas__btn" type="button" data-lang="en" aria-pressed="false">ENG</button>
+    </div>
+
+    <div class="idade__painel" id="idade-pergunta">
+      <span class="idade__selo" aria-hidden="true">+18</span>
+      <h2 id="idade-titulo" data-i18n="idade.titulo">Site para maiores de 18 anos</h2>
+      <p id="idade-texto" data-i18n="idade.texto">Este site apresenta bebidas alcoólicas e é destinado exclusivamente a maiores de 18 anos. Você tem 18 anos ou mais?</p>
+      <div class="idade__acoes">
+        <button class="btn" type="button" id="idade-sim" data-i18n="idade.sim">Sim, tenho 18 anos ou mais</button>
+        <button class="btn btn--contorno" type="button" id="idade-nao" data-i18n="idade.nao">Não, sou menor de idade</button>
+      </div>
+      <p class="idade__aviso" data-i18n="idade.aviso">Beba com moderação. Venda e consumo proibidos para menores de 18 anos.</p>
+    </div>
+
+    <div class="idade__painel" id="idade-negado" hidden role="alert">
+      <h2 data-i18n="idade.negado.titulo">Acesso não permitido</h2>
+      <p data-i18n="idade.negado.texto">Este site é destinado apenas a maiores de 18 anos. Volte quando atingir a maioridade.</p>
+      <div class="idade__acoes">
+        <button class="btn btn--contorno" type="button" id="idade-voltar" data-i18n="idade.voltar">Voltar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/lang/pt.js"></script>
+  <script src="js/lang/es.js"></script>
+  <script src="js/lang/en.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/idade.js"></script>
+  <script src="js/produtos.js"></script>
+</body>
+</html>

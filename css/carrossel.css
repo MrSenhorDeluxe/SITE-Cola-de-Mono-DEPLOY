@@ -1,0 +1,71 @@
+/* ==========================================================
+   CARROSSEL — destaque da landing page
+   ========================================================== */
+.carrossel {
+  max-width: 880px;
+  margin: 2.5rem auto 0;
+  padding-inline: var(--gutter);
+}
+
+.carrossel__viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--raio-lg);
+  background: var(--site-cacau);
+}
+
+.carrossel__trilho {
+  display: flex;
+  margin: 0; padding: 0; list-style: none;
+  transition: transform 600ms ease;
+}
+
+.carrossel__slide { flex: 0 0 100%; min-width: 0; }
+.carrossel__slide img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.carrossel__seta {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 0; cursor: pointer;
+  background: rgba(32, 21, 12, .65); color: var(--creme);
+  font-size: 1.75rem; line-height: 1;
+  display: grid; place-items: center; padding: 0 0 4px;
+  transition: background var(--transicao);
+}
+.carrossel__seta:hover { background: var(--site-noite); }
+.carrossel__seta:focus-visible { outline-color: var(--creme); }
+.carrossel__seta--ant  { left: 1rem; }
+.carrossel__seta--prox { right: 1rem; }
+
+.carrossel__controles {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1rem; margin-top: 1rem;
+}
+
+.carrossel__pausa {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--site-noite); background: transparent; color: var(--site-noite);
+  font-size: .6rem; letter-spacing: -1px; cursor: pointer;
+}
+.carrossel__pausa[aria-pressed="true"] { background: var(--site-noite); color: var(--creme); }
+
+.carrossel__pontos { display: flex; gap: .6rem; }
+.carrossel__ponto {
+  width: 12px; height: 12px; padding: 0; border-radius: 50%;
+  border: 2px solid var(--site-ferrugem); background: transparent; cursor: pointer;
+}
+.carrossel__ponto[aria-current="true"] { background: var(--site-ferrugem); }
+
+@media (max-width: 760px) {
+  .carrossel__viewport { border-radius: 24px; }
+  .carrossel__slide img { aspect-ratio: 4 / 3; }
+  .carrossel__seta { width: 38px; height: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrossel__trilho { transition: none !important; }
+}

@@ -1,0 +1,44 @@
+/* ==========================================================
+   TOKENS — paleta e tipografia (arquivo "Estilização")
+   ========================================================== */
+:root {
+  /* Identidade visual geral do site */
+  --site-areia:   #DBB58F;
+  --site-ferrugem:#8D3319;
+  --site-cacau:   #4a2413;
+  --site-noite:   #20150c;
+
+  /* Paleta dos produtos */
+  --prod-1: #d1a17c;
+  --prod-2: #a86e45;
+  --prod-3: #8f3c27;
+  --prod-4: #381d14;
+
+  /* Apoio */
+  --creme: #fff6e8;
+  --creme-claro: #f3e2c4;
+
+  /* Tipografia */
+  --fonte-titulo:  "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --fonte-texto:   "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --fonte-slogan:  "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  /* Escala tipográfica */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: clamp(1.5rem, 2.4vw, 2rem);
+  --fs-xl: clamp(2rem, 4vw, 3rem);
+  --fs-2xl: clamp(2.5rem, 6vw, 4.5rem);
+
+  /* Layout */
+  --largura-max: 1120px;
+  --largura-texto: 62ch;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --raio-sm: 6px;
+  --raio-lg: 40px;
+  --altura-header: 72px;
+
+  --transicao: 180ms ease;
+}

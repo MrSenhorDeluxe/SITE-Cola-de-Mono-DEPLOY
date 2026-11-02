@@ -1,0 +1,45 @@
+/* ==========================================================
+   AVISO DE MAIORIDADE — modal centralizado (primeira visita)
+   ========================================================== */
+.idade {
+  border: 0; padding: 2.5rem 2rem 2rem;
+  width: min(92vw, 480px);
+  border-radius: 20px;
+  background: var(--creme); color: var(--site-noite);
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(32, 21, 12, .5);
+}
+.idade[open] { animation: idade-entrada 260ms ease-out; }
+.idade::backdrop {
+  background: rgba(32, 21, 12, .92);
+  backdrop-filter: blur(6px);
+}
+
+.idade__idiomas { position: absolute; top: .9rem; right: .9rem; }
+.idade__idiomas .idiomas__btn { padding: .4rem .55rem; }
+.idade__idiomas .idiomas__btn[aria-pressed="true"] { background: var(--site-ferrugem); color: var(--creme); }
+
+.idade__painel[hidden] { display: none; }
+
+.idade__selo {
+  display: inline-grid; place-items: center;
+  width: 72px; height: 72px; margin: .75rem 0 1.25rem;
+  border: 3px solid var(--site-ferrugem); border-radius: 50%;
+  font: 700 1.5rem/1 var(--fonte-titulo); color: var(--site-ferrugem);
+}
+
+.idade h2 { font-size: var(--fs-lg); margin-bottom: .75rem; }
+.idade p { font-size: var(--fs-sm); margin-inline: auto; max-width: 38ch; }
+
+.idade__acoes { display: grid; gap: .75rem; margin: 1.5rem 0 1.25rem; }
+.idade .btn { padding: .85rem 1.25rem; }
+.btn--contorno { background: transparent; color: var(--site-noite); }
+.btn--contorno:hover { background: rgba(32, 21, 12, .08); }
+
+.idade__aviso { font-size: var(--fs-xs); opacity: .75; margin-bottom: 0; }
+
+@keyframes idade-entrada {
+  from { opacity: 0; transform: translateY(12px) scale(.98); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .idade[open] { animation: none; } }

@@ -1,0 +1,64 @@
+/* ==========================================================
+   HOME — landing page
+   ========================================================== */
+.secao { padding-block: 3rem; }
+.secao__titulo {
+  text-align: center; font-size: var(--fs-md); letter-spacing: 0.14em;
+  text-transform: uppercase; margin-bottom: 2.25rem;
+}
+.secao__titulo::after {
+  content: ""; display: block; width: 48px; height: 2px;
+  background: var(--site-ferrugem); margin: 0.9rem auto 0;
+}
+
+/* Sobre nós */
+.sobre { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+.sobre__item img { width: 100%; object-fit: cover; border-radius: var(--raio-sm); }
+.sobre__item:first-child img { aspect-ratio: 3 / 4; object-position: top; }
+.sobre__item:last-child img  { aspect-ratio: 4 / 5; }
+.sobre__item h3 { margin-top: 1rem; font-size: var(--fs-md); color: var(--site-ferrugem); }
+.sobre__item p { font-size: var(--fs-sm); }
+
+/* Valores */
+.valores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.valor img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--raio-sm); }
+.valor h3 { margin-top: 1rem; font-size: var(--fs-base); }
+.valor p { font-size: var(--fs-sm); }
+.valor--rotulo img { object-position: center 25%; }
+
+.cta { text-align: center; padding-block: 2rem 0; }
+
+@media (max-width: 760px) {
+  .sobre, .valores { grid-template-columns: 1fr; }
+  .sobre__item:first-child img { aspect-ratio: 4 / 3; object-position: center 20%; }
+}
+
+/* Blocos de texto */
+.bloco-texto { max-width: var(--largura-texto); margin: 0 auto 2.5rem; text-align: center; }
+.bloco-texto p { font-size: var(--fs-base); }
+
+.info-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; max-width: 900px; margin: 0 auto; }
+.info-duo h3 { font-size: var(--fs-md); color: var(--site-ferrugem); }
+.info-duo p { font-size: var(--fs-sm); }
+
+/* Valores culturais — faixa escura */
+.secao--escura { background: var(--site-cacau); color: var(--creme); margin-top: 3rem; }
+.secao--escura h2, .secao--escura h3 { color: var(--creme); }
+.secao--escura .secao__titulo::after { background: var(--site-areia); }
+.secao--escura .info-duo h3 { color: var(--site-areia); }
+.cultura__sub { text-align: center; font-size: var(--fs-md); margin-bottom: 1.5rem; }
+.cultura__lista {
+  list-style: none; margin: 0 auto 3rem; padding: 0; max-width: 960px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 2rem;
+  font-size: var(--fs-sm);
+}
+.cultura__lista strong { color: var(--site-areia); font-weight: 600; }
+.slogan--destaque { color: var(--site-areia); font-size: var(--fs-xl); line-height: 1.2; margin: 0 0 1rem; }
+
+@media (max-width: 760px) {
+  .info-duo { grid-template-columns: 1fr; }
+  .cultura__lista { grid-template-columns: 1fr; }
+}
+
+.info-duo .slogan--destaque { font-size: var(--fs-xl); color: var(--site-areia); }
+main:has(> .secao--escura:last-child) { padding-bottom: 0; }

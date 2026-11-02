@@ -1,0 +1,96 @@
+/* ==========================================================
+   BASE — reset, tipografia e utilitários
+   ========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--altura-header) + 1rem); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--site-areia);
+  color: var(--site-noite);
+  font-family: var(--fonte-texto);
+  font-size: var(--fs-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+main { flex: 1; padding-bottom: 4rem; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  color: var(--site-noite);
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: inherit; }
+
+.slogan {
+  font-family: var(--fonte-slogan);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--fs-lg);
+  color: var(--site-cacau);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.texto-placeholder { max-width: var(--largura-texto); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 100;
+  background: var(--site-noite); color: var(--creme);
+  padding: 0.6rem 1rem; border-radius: var(--raio-sm);
+}
+.skip-link:focus { top: 1rem; }
+
+:focus-visible {
+  outline: 3px solid var(--site-noite);
+  outline-offset: 3px;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  font-family: var(--fonte-texto);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--site-noite);
+  background: var(--site-noite);
+  color: var(--creme);
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--raio-sm);
+  transition: background var(--transicao), color var(--transicao);
+}
+.btn:hover { background: var(--site-cacau); }
+.btn--bloco { width: 100%; }
+.btn--claro { background: var(--creme); color: var(--site-noite); border-color: var(--creme); }
+.btn--claro:hover { background: var(--creme-claro); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
